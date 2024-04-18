@@ -7,8 +7,8 @@ class ControlProgram:
         result = []
         for i in range(n):
             new_cp = ControlProgram(mode=self.mode + str(i + 1))
-            new_cp.instructions = [self.instructions[j % len(self.instructions)] for j in
-                                   range(i, i + len(self.instructions))]
+            new_cp.instructions = [self.instructions[j % len(self.instructions)] for j in range(i,
+                                                                                                i + 1)]
             result.append(new_cp)
         return tuple(result)
 
